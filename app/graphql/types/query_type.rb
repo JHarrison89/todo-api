@@ -9,7 +9,7 @@ module Types
     # Add root-level fields here.
     # They will be entry points for queries on your schema.
 
-    field :all_todos, Types::TodoType, null: false, description: 'Returns all todos'
+    field :all_todos, [Types::TodoType], null: false, description: 'Returns all todos'
 
     def all_todos
       Todo.all
